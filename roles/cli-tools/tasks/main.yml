@@ -13,33 +13,6 @@
     line: 'ZSH_THEME="gnzh"'
     backrefs: yes
 
-- name: Install jq command-line JSON processor
-  homebrew: name=jq
-
-- name: Install yq XML/YAML query procesor
-  pip: name=yq
-
-- name: Install XmlStarlet
-  homebrew: name=xmlstarlet
-
-- name: Install Taskwarrior command line task management tool
-  homebrew: name=task
-
-- name: Install docutils for processing documentation
-  pip: name=docutils
-
-- name: Install python-json2csv
-  pip: name=python-json2csv
-
-- name: Install cloc lines of code utility
-  homebrew: name=cloc
-
-- name: Install scc code counter
-  homebrew: name=scc
-
-- name: Install petname command line name generator
-  pip: name=petname
-
 - name: Install core GNU utilities
   homebrew: name=coreutils
 
@@ -48,12 +21,6 @@
 
 - name: Install tool for working with Architecture Decision Records
   homebrew: name=adr-tools
-
-- name: Install git-quick-stats
-  homebrew: name=git-quick-stats
-
-- name: Install GitHub tools
-  homebrew: name=gh,git-lfs,git-filter-repo,bfg
 
 - name: Install zsh-completions
   homebrew: name=zsh-completions
@@ -91,26 +58,14 @@
       TERM=xterm &&
       if [ "$TMUX" = "" ]; then tmux; fi
 
-- name: Install Midnight Commander command line file manager
-  homebrew: name=midnight-commander
-
 - name: Install icdiff side-by-side diff tool
   homebrew: name=icdiff
-
-- name: Install telnet
-  homebrew: name=telnet
-
-- name: Install HTTPie cURL wrapper
-  homebrew: name=httpie
 
 - name: Install watch for repeating command line commands
   homebrew: name=watch
 
 - name: Install topgrade
   homebrew: name=topgrade
-
-- name: Install letsencrypt command line tools
-  homebrew: name=letsencrypt
 
 - name: Install htop for process monitoring
   homebrew: name=htop
@@ -120,9 +75,6 @@
 
 - name: Install NCurses Disk Usage utility
   homebrew: name=ncdu
-
-- name: Install Traceroute
-  homebrew: name=tcptraceroute
 
 - name: Install pqrs command line tool for inspecting Parquet files
   homebrew: name=manojkarthick/tap/pqrs

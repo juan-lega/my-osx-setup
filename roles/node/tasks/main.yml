@@ -22,18 +22,6 @@
 - name: Install Yarn
   shell: export NVM_DIR="$HOME/.nvm" && . "$(brew --prefix nvm)/nvm.sh" && $HOME/.nvm/versions/node/v18.13.0/bin/npm install yarn@1.21.1 --global
 
-- name: Install Gitinspector
-  shell: export NVM_DIR="$HOME/.nvm" && . "$(brew --prefix nvm)/nvm.sh" && $HOME/.nvm/versions/node/v18.13.0/bin/npm install gitinspector@0.5.0-dev-2 --global
-
-- name: Install git-stats
-  shell: export NVM_DIR="$HOME/.nvm" && . "$(brew --prefix nvm)/nvm.sh" && $HOME/.nvm/versions/node/v18.13.0/bin/npm install git-stats-html@1.0.8 --global
-
-- name: Install Markdown to Confluence converter
-  shell: export NVM_DIR="$HOME/.nvm" && . "$(brew --prefix nvm)/nvm.sh" && $HOME/.nvm/versions/node/v18.13.0/bin/npm install markdown2confluence-cws@2.0.4 --global
-
-- name: Install js-beautify
-  shell: export NVM_DIR="$HOME/.nvm" && . "$(brew --prefix nvm)/nvm.sh" && $HOME/.nvm/versions/node/v18.13.0/bin/npm install js-beautify@1.10.1 --global
-
 - name: Install vim plugin
   git: repo={{ item.repo }} dest=~/.vim/bundle/{{ item.dest }}
   with_items:

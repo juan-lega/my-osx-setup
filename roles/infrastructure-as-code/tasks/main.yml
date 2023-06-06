@@ -1,35 +1,13 @@
 - name: Install Ansible
   homebrew: name=ansible
 
-- name: Install AWS CLI tools
-  pip: name=awscli extra_args="--ignore-installed six"
-  become: yes
-
 - name: Install Vagrant
   homebrew_cask: name=vagrant
 
 - name: Install Google Cloud SDK
   homebrew_cask: name=google-cloud-sdk
 
-- name: Install Terraform
-  homebrew: name=terraform
-
-- name: Install Packer
-  homebrew: name=packer
-
-- name: Install templates for Kubernetes manifests
-  homebrew: name=ktmpl
-
-- name: Install Kuberenetes command line
-  homebrew: name=kubernetes-cli
-
-- name: Install Act for testing local GitHub workflows
-  homebrew: name=act
-
 - name: Install vim plugins
   git: repo={{ item.repo }} dest=~/.vim/bundle/{{ item.dest }}
   with_items:
     - {repo: "https://github.com/pearofducks/ansible-vim.git", dest: ansible-vim}
-    - {repo: "https://github.com/hashivim/vim-terraform.git", dest: vim-terraform}
-    - {repo: "https://github.com/rodjek/vim-puppet.git", dest: vim-puppet}
-    - {repo: "https://github.com/hashivim/vim-packer.git", dest: vim-packer}
